@@ -11,7 +11,7 @@ namespace controllers;
 Class Base {
 
     static function getVersion ($request, $response, $args) {
-        return $response->write("Version 0.0.2");
+        return $response->write("Version 0.1.0");
     }
 
 }

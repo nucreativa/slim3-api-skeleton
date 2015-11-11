@@ -6,6 +6,8 @@ require __DIR__ . '/../vendor/autoload.php';
 // Create and configure Slim app
 $app = new \Slim\App();
 
+require __DIR__ . '/../app/config.php';
+
 require __DIR__ . '/../app/middlewares.php';
 
 require __DIR__ . '/../app/controllers.php';
