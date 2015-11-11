@@ -13,10 +13,10 @@
 require_once __DIR__. '/../vendor/catfan/medoo/medoo.php';
 $database = new medoo([
     'database_type' => 'mysql',
-    'database_name' => 'yourdatabasename',
-    'server' => 'yourhostname',
-    'username' => 'yourusername',
-    'password' => 'yourpassword',
+    'database_name' => getenv('DB_NAME'),
+    'server' => getenv('DB_HOST'),
+    'username' => getenv('DB_USERNAME'),
+    'password' => getenv('DB_PASSWORD'),
     'charset' => 'utf8'
 ]);
 $app->db = $database;

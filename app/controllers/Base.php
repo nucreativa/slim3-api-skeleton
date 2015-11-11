@@ -11,7 +11,7 @@ namespace controllers;
 Class Base {
 
     static function getVersion ($request, $response, $args) {
-        return $response->write("Version 0.1.0");
+        return $response->write("API Version ".getenv('API_VERSION'));
     }
 
 }
