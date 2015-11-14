@@ -4,6 +4,10 @@
         "monolog/monolog": "^1.17",
         "akrabat/rka-ip-address-middleware": "^0.4.0",
         "catfan/Medoo": "^1.0",
-        "vlucas/phpdotenv": "^2.1"
+        "vlucas/phpdotenv": "^2.1",
+        "predis/predis": "^1.0",
+        "phpro/grumphp": "^0.5.2",
+        "fabpot/php-cs-fixer": "^1.10",
+        "squizlabs/php_codesniffer": "^2.3"
     }
 }
