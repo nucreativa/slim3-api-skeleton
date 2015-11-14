@@ -35,9 +35,9 @@ $container['medoo'] = function ($container) {
 // Create and configure Slim app
 $app = new \Slim\App($container);
 
-require __DIR__.'/../app/middlewares.php';
-
 require __DIR__.'/../app/autoload.php';
+
+require __DIR__.'/../app/middlewares.php';
 
 require __DIR__.'/../app/routes.php';
 

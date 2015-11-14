@@ -7,6 +7,8 @@
  */
 $app->get('/version', 'endpoints\Base::getVersion');
 
+$app->get('/auth', 'endpoints\Auth::actionAuth');
+
 $app->get('/', function ($request, $response, $args) {
     return $response->write("Hello World, it's a Slim Framework v3 based API :)");
 });

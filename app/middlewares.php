@@ -5,6 +5,29 @@
  * Date: 11/2/15
  * Time: 12:16 AM.
  */
+
+/*
+ * Auth Middleware
+ */
+$app->add(function (\Slim\Http\Request $request, \Slim\Http\Response $response, $next) {
+
+    // If path is "/auth" no need authorization process
+    $path = $request->getUri()->getPath();
+    if ($path == '/auth') {
+        return $next($request, $response);
+    }
+
+    // If request has the correct token, passed it to endpoint
+    if ($request->getHeader('Authorization')) {
+        $token = explode(' ', $request->getHeader('Authorization')[0])[1];
+        if (endpoints\Auth::validateToken($token)) {
+            return $next($request, $response);
+        }
+    }
+
+    return $response->withStatus(401);
+});
+
 $checkProxyHeaders = true; // Note: Never trust the IP address for security processes!
 $trustedProxies = ['10.0.0.1', '10.0.0.2']; // Note: Never trust the IP address for security processes!
 $app->add(new \RKA\Middleware\IpAddress($checkProxyHeaders, $trustedProxies));

@@ -8,6 +8,7 @@
         "predis/predis": "^1.0",
         "phpro/grumphp": "^0.5.2",
         "fabpot/php-cs-fixer": "^1.10",
-        "squizlabs/php_codesniffer": "^2.3"
+        "squizlabs/php_codesniffer": "^2.3",
+        "firebase/php-jwt": "^3.0"
     }
 }
