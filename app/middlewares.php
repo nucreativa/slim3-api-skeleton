@@ -6,6 +6,12 @@
  * Time: 12:16 AM.
  */
 
+/* CORS Support */
+$config = [
+    'origin' => '*.example.com', // allow all hosts ending example.com
+];
+$app->add(new \Bairwell\MiddlewareCors($config));
+
 /*
  * Auth Middleware
  */
